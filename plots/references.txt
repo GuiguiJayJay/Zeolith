@@ -1,0 +1,65 @@
+Columns: epoch train_acc  train_loss  test_acc test_loss
+
+Ref01-X:
+--------
+  *Arch DNN:
+    - Layers: Dense1(2000) -> Dense2(200) -> Dense3(200) -> Dense4(100)
+    - activations: ReLU on all
+    - Dropout = 0.2 on ALL layers
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.95
+
+Ref02-X:
+--------
+  *Arch DNN:
+    - Layers: Dense1(2000) -> Dense2(200) -> Dense3(100)
+    - activations: Dense1(ReLU), linear for others
+    - Dropout = 0.4 on Dense1 only
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.95
+
+Ref03-X:
+--------
+  *Arch DNN:
+    - Layers: Dense1(2000) -> Dense2(200) -> Dense3(200) -> Dense4(100)
+    - activations: Dense1(ReLU), Dense2&3 linear, Dense4 sigmoid
+    - Dropout = 0.2 on ALL layers
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.9
+
+Ref04-X: TO DO
+--------
+  *Arch DNN:
+    - Layers: Dense1(1000) -> Dense2(200) -> Dense3(200) -> Dense4(100)
+    - activations: ReLU on all
+    - Dropout = 0.2 on ALL layers
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.95
+  *Special:
+    - decay rate based on cumulative loss per epoch
+    
+Ref05-X:
+--------
+  *Arch DNN:
+    - Layers: Dense1(2000) -> Dense2(200) -> Dense3(200) -> Dense4(100)
+    - activations: ReLU on all
+    - Dropout = 0.2 on ALL layers
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.95
+  *Special:
+    - decay rate based on cumulative loss per epoch
+    
+Ref05-X: TO DO (low priority)
+--------
+  *Arch DNN:
+    - Layers: Dense1(2000) -> Dense2(200) -> Dense3(200) -> Dense4(100)
+    - activations: Dense1(ReLU), Dense2&3 linear, Dense4 sigmoid
+    - Dropout = 0.2 on Dense1 only
+  *Settings:
+    - Decay = 0.95
+    - Threshold = 0.9
