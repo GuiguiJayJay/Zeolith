@@ -13,4 +13,4 @@ a mean accuracy of 67.8%. It is not great, but there is room for improvements.
 ## Architecture
 I usual, I performed a lot of architecture testing, but there are still many possibilities to be checked.
 The current architecture is the following:
-[[https://github.com/GuiguiJayJay/Zeolith/tree/master/plots/Architecture-Ref05.png|alt=architecture]]
+![architecture](https://github.com/GuiguiJayJay/Zeolith/tree/master/plots/Architecture-Ref05.png)
