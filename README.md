@@ -14,3 +14,13 @@ a mean accuracy of 67.8%. It is not great, but there is room for improvements.
 I usual, I performed a lot of architecture testing, but there are still many possibilities to be checked.
 The current architecture is the following:
 ![architecture](https://github.com/GuiguiJayJay/Zeolith/tree/master/plots/Architecture-Ref05.png)
+where F stands for filter size, and S for the stride.
+
+### Activation functions
+I tried a big bunch of activation functions combination, but couldn't get any result as good the one we get with
+ReLU. That being, given the number of testing examples (about 80), a few percent for accuracy doesn't means a lot.
+I finally kept the ReLU for its discriminative power, as it push to 0 anything negative. This property can induce 
+sparsity in the hidden units, allowing them to be more distinct. On the top of that, it doesn't face vanishing 
+gradients problem given the form of its derivative (see [this paper](http://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf)).
+
+### Dimensionality of the NN
