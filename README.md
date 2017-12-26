@@ -132,12 +132,12 @@ If you want to use weights from the disk and do predictions, you will need to ad
 and put your test pictures in.
 
 Once this is done, simply execute the `main.py` script to run the specified tasks. You will need for this to set some 
-options and or parameters, which can be found in 3 main places:
+options and parameters, which can be found in 3 main places:
 - `main.py`: change the training parameters at the `run_cnn` function call (batch size, intial learning rate, decay rate, 
 number of epochs and dropout rate).
 - `zeolib/models.py`: change the neural network architecture here.
 - `zeolib/settings.py`: set the global parameters here. The `ML_mode` dictionnary typically needs to be looked at. The 2 
-first options are to enable or not the training (if not, loads weights) and the prediction mode, and the last one, `Sampler`,
+first options enable or not the training (if not, loads weights) and the prediction mode, and the last one, `Sampler`,
 if features extraction is enabled or not. You can also change the split size between training and test set from the full 
 dataset, the number of pixels needed to define an edge or a face for the `Sampler` mode and the picture resizing width/height.
 
